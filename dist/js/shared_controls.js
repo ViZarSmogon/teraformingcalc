@@ -889,8 +889,8 @@ $(".teraToggle").change(function () {
 		forme.val(newForme);
 		container.find(".ability").val(pokedex[newForme].abilities[0]);
 	} else if (
-			startsWith(curForme, "Skeledirge") || startsWith(curForme, "Samurott-Hisui") || startsWith(curForme, "Tinkaton") || 
-			startsWith(curForme, "Blissey") || startsWith(curForme, "Pincurchin") || startsWith(curForme, "Metagross")) {
+		startsWith(curForme, "Skeledirge") || startsWith(curForme, "Samurott-Hisui") || startsWith(curForme, "Tinkaton") || 
+		startsWith(curForme, "Blissey") || startsWith(curForme, "Pincurchin") || startsWith(curForme, "Metagross")) {
 		//if (
 			//!["Skeledirge", "Samurott-Hisui", "Tinkaton", "Blissey", "Pincurchin", "Metagross"].includes(curForme) && !endsWith(curForme, "Tera")/* &&
 			//container.find(".item").val() !== curForme.split("-")[1] + " Shard"*/
