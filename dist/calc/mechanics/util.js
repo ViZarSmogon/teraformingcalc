@@ -268,13 +268,13 @@ function checkSinkorSwim(gen, source, target) {
         target.hasItem('Clear Amulet');
     if (source.hasAbility('Sink or Swim') && source.abilityOn && !blocked) {
         if (target.hasAbility('Contrary')) {
-            target.boosts.atk = Math.min(6, target.boosts.spe + 1);
+            target.boosts.spe = Math.min(6, target.boosts.spe + 1);
         }
         else if (target.hasAbility('Simple')) {
-            target.boosts.atk = Math.max(-6, target.boosts.spe - 2);
+            target.boosts.spe = Math.max(-6, target.boosts.spe - 2);
         }
         else {
-            target.boosts.atk = Math.max(-6, target.boosts.spe - 1);
+            target.boosts.spe = Math.max(-6, target.boosts.spe - 1);
         }
         if (target.hasAbility('Competitive')) {
             target.boosts.spa = Math.min(6, target.boosts.spa + 2);
