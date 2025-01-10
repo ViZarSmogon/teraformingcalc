@@ -202,6 +202,12 @@ function getForcedTeraType(pokemonName) {
 		return "Dragon";
 	} else if (startsWith(pokemonName, "Metagross")) {
 		return "Steel";
+	} else if (startsWith(pokemonName, "Pawmot")) {
+		return "Electric";
+	} else if (startsWith(pokemonName, "Hydrapple")) {
+		return "Poison";
+	} else if (startsWith(pokemonName, "Mabosstiff")) {
+		return "Poison";
 	}
 	return null;
 }
@@ -613,7 +619,8 @@ $(".set-selector").change(function () {
 		var pokeObj = $(this).closest(".poke-info");
 		var isAutoTera =
 		((startsWith(pokemonName, "Ogerpon") || startsWith(pokemonName, "Skeledirge") || startsWith(pokemonName, "Samurott-Hisui") || startsWith(pokemonName, "Tinkaton") || 
-		startsWith(pokemonName, "Blissey") || startsWith(pokemonName, "Pincurchin") || startsWith(pokemonName, "Metagross")) && endsWith(pokemonName, "Tera")) ||
+		startsWith(pokemonName, "Blissey") || startsWith(pokemonName, "Pincurchin") || startsWith(pokemonName, "Metagross") || startsWith(pokemonName, "Pawmot") || 
+		startsWith(pokemonName, "Hydrapple") || startsWith(pokemonName, "Mabostiff")) && endsWith(pokemonName, "Tera")) ||
 		pokemonName === 'Terapagos-Stellar';
 		if (stickyMoves.getSelectedSide() === pokeObj.prop("id")) {
 			stickyMoves.clearStickyMove();
@@ -890,7 +897,8 @@ $(".teraToggle").change(function () {
 		container.find(".ability").val(pokedex[newForme].abilities[0]);
 	} else if (
 		startsWith(curForme, "Skeledirge") || startsWith(curForme, "Samurott-Hisui") || startsWith(curForme, "Tinkaton") || 
-		startsWith(curForme, "Blissey") || startsWith(curForme, "Pincurchin") || startsWith(curForme, "Metagross")) {
+		startsWith(curForme, "Blissey") || startsWith(curForme, "Pincurchin") || startsWith(curForme, "Metagross") || 
+		startsWith(curForme, "Pawmot") || startsWith(curForme, "Hydrapple") || startsWith(curForme, "Mabosstiff")) {
 		//if (
 			//!["Skeledirge", "Samurott-Hisui", "Tinkaton", "Blissey", "Pincurchin", "Metagross"].includes(curForme) && !endsWith(curForme, "Tera")/* &&
 			//container.find(".item").val() !== curForme.split("-")[1] + " Shard"*/
@@ -963,7 +971,8 @@ $(".forme").change(function () {
 	}
 	if (
 		((startsWith($(this).val(), "Ogerpon") || startsWith($(this).val(), "Skeledirge") || startsWith($(this).val(), "Samurott-Hisui") || startsWith($(this).val(), "Tinkaton") || 
-		startsWith($(this).val(), "Blissey") || startsWith($(this).val(), "Pincurchin") || startsWith($(this).val(), "Metagross")) && endsWith($(this).val(), "Tera")) || $(this).val() === "Terapagos-Stellar"
+		startsWith($(this).val(), "Blissey") || startsWith($(this).val(), "Pincurchin") || startsWith($(this).val(), "Metagross") || startsWith($(this).val(), "Pawmot") || 
+		startsWith($(this).val(), "Hydrapple") || startsWith($(this).val(), "Mabostiff")) && endsWith($(this).val(), "Tera")) || $(this).val() === "Terapagos-Stellar"
 	) {
 		$(this).parent().siblings().find(".teraToggle").prop("checked", true);
 	}
