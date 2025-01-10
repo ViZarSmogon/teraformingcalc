@@ -371,6 +371,8 @@ var SV = SS.concat([
     'Zero to Hero',
     'Soulful Noise',
     'Uptime',
+    'Energizer',
+    'Sink or Swim',
 ]);
 exports.ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
 var Abilities = (function () {

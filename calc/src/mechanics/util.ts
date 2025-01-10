@@ -231,6 +231,26 @@ export function checkIntimidate(gen: Generation, source: Pokemon, target: Pokemo
   }
 }
 
+export function checkSinkorSwim(gen: Generation, source: Pokemon, target: Pokemon) {
+  const blocked =
+    target.hasAbility('Clear Body', 'White Smoke', 'Full Metal Body') ||
+    // More abilities now block Sink or Swim in Gen 8+ (DaWoblefet, Cloudy Mistral)
+    (gen.num >= 8 && target.hasAbility('Inner Focus', 'Own Tempo', 'Oblivious', 'Scrappy')) ||
+    target.hasItem('Clear Amulet');
+  if (source.hasAbility('Sink or Swim') && source.abilityOn && !blocked) {
+    if (target.hasAbility('Contrary')) {
+      target.boosts.atk = Math.min(6, target.boosts.spe + 1);
+    } else if (target.hasAbility('Simple')) {
+      target.boosts.atk = Math.max(-6, target.boosts.spe - 2);
+    } else {
+      target.boosts.atk = Math.max(-6, target.boosts.spe - 1);
+    }
+    if (target.hasAbility('Competitive')) {
+      target.boosts.spa = Math.min(6, target.boosts.spa + 2);
+    }
+  }
+}
+
 export function checkDownload(source: Pokemon, target: Pokemon, wonderRoomActive?: boolean) {
   if (source.hasAbility('Download')) {
     let def = target.stats.def;

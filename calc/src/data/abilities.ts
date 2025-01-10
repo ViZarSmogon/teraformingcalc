@@ -341,6 +341,8 @@ const SV = SS.concat([
   //Teraforming
   'Soulful Noise',
   'Uptime',
+  'Energizer',
+  'Sink or Swim',
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

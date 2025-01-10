@@ -9368,7 +9368,8 @@ var SV_PATCH = {
         types: ['Grass', 'Dragon'],
         bs: { hp: 106, at: 80, df: 110, sa: 120, sd: 80, sp: 44 },
         weightkg: 93,
-        abilities: { 0: 'Supersweet Syrup' }
+        abilities: { 0: 'Supersweet Syrup' },
+        otherFormes: ['Hydrapple-Tera']
     },
     'Iron Bundle': {
         types: ['Ice', 'Water'],
@@ -9482,7 +9483,8 @@ var SV_PATCH = {
         types: ['Dark'],
         bs: { hp: 80, at: 120, df: 90, sa: 60, sd: 70, sp: 85 },
         weightkg: 61,
-        abilities: { 0: 'Intimidate' }
+        abilities: { 0: 'Intimidate' },
+        otherFormes: ['Mabosstiff-Tera']
     },
     Maschiff: {
         types: ['Dark'],
@@ -9666,7 +9668,8 @@ var SV_PATCH = {
         types: ['Electric', 'Fighting'],
         bs: { hp: 70, at: 115, df: 70, sa: 70, sd: 60, sp: 105 },
         weightkg: 41,
-        abilities: { 0: 'Volt Absorb' }
+        abilities: { 0: 'Volt Absorb' },
+        otherFormes: ['Pawmot-Tera']
     },
     Pecharunt: {
         types: ['Poison', 'Ghost'],
@@ -10080,6 +10083,27 @@ var SV_PATCH = {
         gender: 'N',
         abilities: { 0: 'Technician' },
         baseSpecies: 'Metagross'
+    },
+    'Pawmot-Tera': {
+        types: ['Electric', 'Fighting'],
+        bs: { hp: 90, at: 140, df: 70, sa: 60, sd: 60, sp: 120 },
+        weightkg: 41,
+        abilities: { 0: 'Energizer' },
+        baseSpecies: 'Pawmot'
+    },
+    'Hydrapple-Tera': {
+        types: ['Grass', 'Dragon'],
+        bs: { hp: 106, at: 80, df: 120, sa: 144, sd: 80, sp: 60 },
+        weightkg: 93,
+        abilities: { 0: 'Toxic Chain' },
+        baseSpecies: 'Hydrapple'
+    },
+    'Mabosstiff-Tera': {
+        types: ['Dark'],
+        bs: { hp: 80, at: 145, df: 100, sa: 60, sd: 85, sp: 85 },
+        weightkg: 61,
+        abilities: { 0: 'Sink or Swim' },
+        baseSpecies: 'Mabosstiff'
     }
 };
 var SV = (0, util_1.extend)(true, {}, SS, SV_PATCH, PLA_PATCH);

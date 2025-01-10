@@ -47,6 +47,8 @@ import {
   isQPActive,
   getStabMod,
   getStellarStabMod,
+  
+  checkSinkorSwim,
 } from './util';
 
 export function calculateSMSSSV(
