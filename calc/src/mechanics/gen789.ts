@@ -88,6 +88,9 @@ export function calculateSMSSSV(
 
   checkWindRider(attacker, field.attackerSide);
   checkWindRider(defender, field.defenderSide);
+  
+  checkSinkorSwim(gen, attacker, defender);
+  checkSinkorSwim(gen, defender, attacker);
 
   if (move.named('Meteor Beam', 'Electro Shot')) {
     attacker.boosts.spa +=

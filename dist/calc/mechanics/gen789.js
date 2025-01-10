@@ -32,6 +32,8 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     (0, util_2.checkIntrepidSword)(defender, gen);
     (0, util_2.checkWindRider)(attacker, field.attackerSide);
     (0, util_2.checkWindRider)(defender, field.defenderSide);
+    (0, util_2.checkSinkorSwim)(gen, attacker, defender);
+    (0, util_2.checkSinkorSwim)(gen, defender, attacker);
     if (move.named('Meteor Beam', 'Electro Shot')) {
         attacker.boosts.spa +=
             attacker.hasAbility('Simple') ? 2
